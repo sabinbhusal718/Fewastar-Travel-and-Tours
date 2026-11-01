@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Air Ticketing | Fewastar International Travel & Tours{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/air.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-hero">
+  <div class="container center">
+    <span class="pill light">Air Ticketing Desk</span>
+    <h1>FLIGHT TICKETS, BOOKED PERSONALLY</h1>
+    <p class="lead">International and domestic flights, group fares, date changes and refunds, handled by one team in Pokhara.</p>
+    <a href="#book" class="btn btn-orange">Request a Fare</a>
+  </div>
+</section>
+
+<!-- ============ FLIGHT ENQUIRY FORM ============ -->
+<section id="book" class="section">
+  <div class="container">
+    <form class="card air-form" id="airForm" onsubmit="sendAir(event)">
+      <span class="eyebrow">Flight Enquiry</span>
+      <h2>TELL US YOUR TRIP</h2>
+      <p class="muted">Send the details and we reply on WhatsApp with fares and schedules.</p>
+
+      <div class="tabs">
+        <button type="button" class="tab on" data-trip="Round trip">Round Trip</button>
+        <button type="button" class="tab" data-trip="One way">One Way</button>
+        <button type="button" class="tab" data-trip="Multi-city">Multi-City</button>
+      </div>
+      <input type="hidden" name="trip" id="tripType" value="Round trip">
+
+      <div class="fields">
+        <label>From<input name="origin" value="Kathmandu (KTM)" required></label>
+        <label>To<input name="destination" placeholder="e.g. Dubai, London, Sydney" required></label>
+        <label>Departure Date<input type="date" name="depart" required></label>
+        <label id="returnWrap">Return Date<input type="date" name="return"></label>
+        <label id="routeWrap" class="full" hidden>Route Details
+          <textarea name="route" rows="2" placeholder="e.g. KTM to DXB on 10 Mar, DXB to LHR on 15 Mar, LHR to KTM on 25 Mar"></textarea>
+        </label>
+        <label>Adults<input type="number" name="adults" min="1" value="1"></label>
+        <label>Children (2 to 11)<input type="number" name="children" min="0" value="0"></label>
+        <label>Infants (under 2)<input type="number" name="infants" min="0" value="0"></label>
+        <label>Cabin
+          <select name="cabin">
+            <option>Economy</option>
+            <option>Premium Economy</option>
+            <option>Business</option>
+            <option>First</option>
+          </select>
+        </label>
+        <label>Full Name<input name="name" placeholder="Your name" required></label>
+        <label>WhatsApp Number<input name="phone" type="tel" placeholder="+977 98..." required></label>
+        <label class="full">Preferences (Optional)
+          <textarea name="notes" rows="3" placeholder="Preferred airline, direct flights only, extra baggage, student or labour fare..."></textarea>
+        </label>
+      </div>
+      <button class="btn btn-orange block">Send Flight Enquiry</button>
+      <p class="form-note" id="airNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ WHAT WE BOOK ============ -->
+<section class="section alt">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">What We Book</span>
+      <h2>TICKETING FOR EVERY KIND OF TRIP</h2>
+    </div>
+    <div class="grid3">
+      <article class="card"><span class="ico"><i class="fa-solid fa-earth-asia"></i></span><h3>International Flights</h3><p>Asia, the Middle East, Europe, Australia and the Americas on full-service and budget airlines.</p></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-plane-up"></i></span><h3>Domestic Flights</h3><p>Kathmandu, Pokhara, Lukla, Bhairahawa, Jomsom and other Nepal sectors.</p></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-user-group"></i></span><h3>Group Bookings</h3><p>Family, pilgrimage and company groups, with a single point of contact.</p></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-graduation-cap"></i></span><h3>Student &amp; Labour Fares</h3><p>Extra-baggage fares for students and workers travelling abroad, where the airline offers them.</p></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-rotate"></i></span><h3>Date Changes &amp; Refunds</h3><p>We raise rescheduling and cancellation requests with the airline for you. Fees follow the fare rules.</p></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-route"></i></span><h3>Multi-City Trips</h3><p>Open-jaw and multi-stop itineraries planned around your route.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">How It Works</span>
+      <h2>FROM ENQUIRY TO E-TICKET</h2>
+    </div>
+    <ol class="steps">
+      <li><b>Send your trip</b><span>Fill the form above or message us on WhatsApp.</span></li>
+      <li><b>Receive options</b><span>We send fares, timings and baggage rules to compare.</span></li>
+      <li><b>Confirm and pay</b><span>Share passport details and complete payment with our desk.</span></li>
+      <li><b>Get your e-ticket</b><span>The ticket reaches your WhatsApp and email.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ DOCUMENTS ============ -->
+<section class="section alt">
+  <div class="container docs">
+    <div>
+      <span class="eyebrow">Before You Book</span>
+      <h2>KEEP THESE READY</h2>
+      <p class="muted">Having these on hand lets us issue your ticket faster.</p>
+    </div>
+    <ul class="checklist">
+      <li>Passport with at least 6 months validity, as a scan of the photo page</li>
+      <li>Full names exactly as written in the passport</li>
+      <li>Visa or work permit details, if the destination needs one</li>
+      <li>A WhatsApp number and an email address</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="container faq-wrap">
+    <div class="center head">
+      <span class="eyebrow">Questions</span>
+      <h2>COMMON QUESTIONS</h2>
+    </div>
+    <details class="faq"><summary>How quickly will I get a fare?</summary><p>During office hours we usually reply within a couple of hours. Send your trip on WhatsApp for the fastest response.</p></details>
+    <details class="faq"><summary>Can I change or cancel my ticket?</summary><p>It depends on the airline's fare rules. We check the rules before you pay and handle the change or refund request for you.</p></details>
+    <details class="faq"><summary>Do you book tickets for groups?</summary><p>Yes. Tell us the number of travellers and the dates, and we will request group fares where the airline allows them.</p></details>
+    <details class="faq"><summary>How do I pay?</summary><p>Ask our desk on WhatsApp for the payment options available for your booking.</p></details>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>NEED A FARE TODAY?</h2>
+      <p>Message the ticketing desk directly.</p>
+    </div>
+    <div class="row">
+      <a href="https://wa.me/9779851240378" class="btn btn-orange">WhatsApp Us</a>
+      <a href="tel:+9779851240378" class="btn btn-glass">Call +977 9851240378</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/air.js' %}" defer></script>
+{% endblock %}

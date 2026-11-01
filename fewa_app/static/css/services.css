@@ -1,0 +1,27 @@
+/* ===== Jump links ===== */
+.svc-jump{position:sticky;top:90px;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.svc-jump .container{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:thin}
+.svc-jump a{flex:none;padding:8px 16px;border-radius:999px;background:var(--bg);font-size:14px;font-weight:600;white-space:nowrap}
+.svc-jump a:hover,.svc-jump a:focus-visible{background:var(--blue);color:#fff}
+
+/* ===== Service rows ===== */
+.svc-list{padding-top:40px}
+.svc{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start;padding:44px 0;border-bottom:1px solid var(--line);scroll-margin-top:170px}
+.svc:last-child{border-bottom:0}
+.svc-head h2{font-size:clamp(24px,2.6vw,32px);margin:16px 0 8px}
+.svc-head .muted{margin-bottom:20px}
+.svc-points{list-style:none}
+.svc-points li{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid var(--line);font-size:16px}
+.svc-points li:first-child{padding-top:0}
+.svc-points li:last-child{border-bottom:0}
+.svc-points li::before{content:"✓";position:absolute;left:0;top:14px;color:var(--green);font-weight:800}
+.svc-points li:first-child::before{top:0}
+
+/* ===== Responsive ===== */
+@media(max-width:820px){
+  .svc{grid-template-columns:1fr;gap:20px;padding:32px 0}
+}
+@media(max-width:560px){
+  .svc-jump{top:72px}
+  .svc{scroll-margin-top:150px}
+}

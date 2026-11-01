@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services | Fewastar International Travel & Tours{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-hero">
+  <div class="container center">
+    <span class="pill light">Our Services</span>
+    <h1>EVERYTHING FOR YOUR JOURNEY, IN ONE DESK</h1>
+    <p class="lead">Flights, visas, holidays, treks and ground transport, arranged by one team in Pokhara.</p>
+    <a href="https://wa.me/9779851240378" class="btn btn-orange">Talk to Our Team</a>
+  </div>
+</section>
+
+<!-- ============ JUMP LINKS ============ -->
+<nav class="svc-jump" aria-label="Services">
+  <div class="container">
+    <a href="#air">Air Ticketing</a>
+    <a href="#visa">Visa Assistance</a>
+    <a href="#holiday">Holiday Packages</a>
+    <a href="#trekking">Trekking</a>
+    <a href="#vehicle">Vehicles</a>
+    <a href="#hotel">Hotels</a>
+    <a href="#student">Student &amp; Work Travel</a>
+    <a href="#group">Group Travel</a>
+  </div>
+</nav>
+
+<!-- ============ SERVICES ============ -->
+<section class="section svc-list">
+  <div class="container">
+
+    <article class="svc" id="air">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-plane-departure"></i></span>
+        <h2>Air Ticketing</h2>
+        <p class="muted">International and domestic flights with personal follow-up.</p>
+        <a class="btn btn-orange" href="{% url 'air_ticketing' %}">Open Ticketing Desk</a>
+      </div>
+      <ul class="svc-points">
+        <li>Fares on full-service and budget airlines</li>
+        <li>Round trip, one way and multi-city itineraries</li>
+        <li>Date changes and refund requests handled with the airline</li>
+        <li>Domestic sectors including Lukla, Jomsom and Bhairahawa</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="visa">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-passport"></i></span>
+        <h2>Visa &amp; Documentation Assistance</h2>
+        <p class="muted">Help with preparing and submitting travel paperwork.</p>
+        <a class="btn btn-orange" href="https://wa.me/9779851240378?text=Hi, I need visa assistance">Ask About Visas</a>
+      </div>
+      <ul class="svc-points">
+        <li>Checklist of documents for your destination</li>
+        <li>Guidance on filling and submitting application forms</li>
+        <li>Appointment and submission support where applicable</li>
+        <li>Visa decisions are made by the embassy, not by us</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="holiday">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-umbrella-beach"></i></span>
+        <h2>Holiday Packages</h2>
+        <p class="muted">Trips planned around your dates, budget and group.</p>
+        <a class="btn btn-orange" href="https://wa.me/9779851240378?text=Hi, I want a holiday package">Plan a Holiday</a>
+      </div>
+      <ul class="svc-points">
+        <li>Flights, hotels and transfers bundled into one plan</li>
+        <li>Domestic breaks in Pokhara, Chitwan, Lumbini and beyond</li>
+        <li>International holidays across Asia and the Middle East</li>
+        <li>Itinerary adjusted to your interests before you pay</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="trekking">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-mountain"></i></span>
+        <h2>Trekking &amp; Expeditions</h2>
+        <p class="muted">Mountain trips organised from Pokhara, the gateway to Annapurna.</p>
+        <a class="btn btn-orange" href="https://wa.me/9779851240378?text=Hi, I want to plan a trek">Plan a Trek</a>
+      </div>
+      <ul class="svc-points">
+        <li>Treks in the Annapurna, Everest and Mustang regions</li>
+        <li>Flights to trailheads such as Lukla and Jomsom</li>
+        <li>Guide and porter arrangements</li>
+        <li>Permit guidance for restricted areas</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="vehicle">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-van-shuttle"></i></span>
+        <h2>Vehicle Booking</h2>
+        <p class="muted">Ground transport for airport runs, tours and long trips.</p>
+        <a class="btn btn-orange" href="{% url 'home' %}#vehicles">Book a Vehicle</a>
+      </div>
+      <ul class="svc-points">
+        <li>Cars, SUVs, Hiace vans and tourist buses</li>
+        <li>Airport pickup and drop in Pokhara and Kathmandu</li>
+        <li>One way, round trip and full-day hire</li>
+        <li>Price and driver confirmed on WhatsApp before the trip</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="hotel">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-hotel"></i></span>
+        <h2>Hotel &amp; Accommodation</h2>
+        <p class="muted">Stays booked to fit your route and budget.</p>
+        <a class="btn btn-orange" href="https://wa.me/9779851240378?text=Hi, I need a hotel booking">Book a Stay</a>
+      </div>
+      <ul class="svc-points">
+        <li>Hotels and guesthouses in Pokhara, Kathmandu and trek towns</li>
+        <li>Lakeside and city-centre options</li>
+        <li>Transfers matched to your flight times</li>
+        <li>Stopover stays for long layovers</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="student">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-graduation-cap"></i></span>
+        <h2>Student &amp; Work Travel</h2>
+        <p class="muted">Tickets and support for people moving abroad to study or work.</p>
+        <a class="btn btn-orange" href="https://wa.me/9779851240378?text=Hi, I need a student or work travel ticket">Get a Student Fare</a>
+      </div>
+      <ul class="svc-points">
+        <li>Fares with extra baggage where the airline offers them</li>
+        <li>Flexible-date options for visa timing</li>
+        <li>Rescheduling help if your plans change</li>
+        <li>Pre-departure checklist for documents and luggage</li>
+      </ul>
+    </article>
+
+    <article class="svc" id="group">
+      <div class="svc-head">
+        <span class="ico"><i class="fa-solid fa-people-group"></i></span>
+        <h2>Group &amp; Corporate Travel</h2>
+        <p class="muted">One contact for families, pilgrim groups and company trips.</p>
+        <a class="btn btn-orange" href="https://wa.me/9779851240378?text=Hi, I need a group travel quote">Request Group Quote</a>
+      </div>
+      <ul class="svc-points">
+        <li>Group fares requested from airlines where available</li>
+        <li>Flights, vehicles and hotels coordinated together</li>
+        <li>Single invoice and one point of contact</li>
+        <li>Pilgrimage and school trip planning</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>NOT SURE WHAT YOU NEED?</h2>
+      <p>Tell us where you are going. We will suggest what to book and in what order.</p>
+    </div>
+    <div class="row">
+      <a href="https://wa.me/9779851240378" class="btn btn-orange">WhatsApp Us</a>
+      <a href="{% url 'home' %}#connect" class="btn btn-glass">Send a Message</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

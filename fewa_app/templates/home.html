@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="{% static 'images/hero.jpg' %}">
+    <source src="{% static 'videos/fewaview.mp4' %}" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+
+  <div class="container center hero-content">
+    <span class="pill">Fewastar Ticketing Desk - Pokhara, Nepal</span>
+    <h1>INTERNATIONAL AIR TICKETS,<br><span class="blue">MADE SIMPLE.</span></h1>
+    <p class="lead">Your journey. Our service. Competitive fares and personal assistance from Pokhara, Nepal.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-orange">Get a Quote</a>
+      <a href="https://wa.me/9779851240378" class="btn btn-white">WhatsApp Us</a>
+    </div>
+    <form class="search" id="tickets" action="#contact">
+      <div class="tabs">
+        <button type="button" class="tab on">Round Trip</button>
+        <button type="button" class="tab">One Way</button>
+        <button type="button" class="tab">Multi-City</button>
+        <span class="gds">Instant GDS Airline Access</span>
+      </div>
+      <div class="search-row">
+        <label>From<input value="Pokhara (PKR) / KTM"></label>
+        <label>To<input placeholder="Dubai, Sydney, London, Tokyo..."></label>
+        <label>Departure<input type="date"></label>
+        <label>Return<input type="date"></label>
+        <button class="btn btn-orange">Request Quote</button>
+      </div>
+      <ul class="perks">
+        <li>No Hidden Surcharges</li>
+        <li>Dedicated WhatsApp Follow-Up</li>
+        <li>Special Student &amp; Labor Baggage Deals</li>
+        <li>Hotel &amp; Transfer Combinations</li>
+      </ul>
+    </form>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section id="services" class="section alt">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">Fewastar Advantage</span>
+      <h2>WHY CHOOSE FEWASTAR</h2>
+      <p class="muted">Pokhara's trusted travel partner for transparent fares, custom multi-sector ticketing, and high-touch assistance whenever your travel takes you across borders.</p>
+    </div>
+    <div class="grid3">
+      <article class="card"><span class="ico"><i class="fa-solid fa-arrow-trend-down"></i></span><h3>Competitive Fares</h3><p>We help you find suitable flight options at competitive prices across premium and budget international carriers.</p><a href="#contact">Explore routes</a></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-headset"></i></span><h3>Professional Service</h3><p>Travel assistance from a team focused on making your booking experience simple, structured, and stress-free.</p><a href="#contact">Our standards</a></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-gauge-simple-high"></i></span><h3>Quick Response</h3><p>Get fast assistance on flight enquiries and booking requests with real-time seat lock-ins via direct WhatsApp desk.</p><a href="#contact">Instant messaging</a></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-plane"></i></span><h3>International Destinations</h3><p>We assist travelers flying to destinations across Asia, the Middle East, Australia, Europe, the Americas, and beyond.</p><a href="#international">Global hubs</a></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-user-check"></i></span><h3>Personalized Assistance</h3><p>We listen to your travel requirements, layover preferences, and baggage allowances, and help you find suitable options.</p><a href="#connect">Custom itineraries</a></article>
+      <article class="card"><span class="ico"><i class="fa-solid fa-city"></i></span><h3>Based in Pokhara</h3><p>Your local travel partner in Pokhara, Nepal. Walk into our office or coordinate virtually with experts who know local travelers' needs.</p><a href="#contact">Visit our desk</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERNATIONAL DESTINATIONS ============ -->
+<section id="international" class="section">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">Fly Worldwide</span>
+      <h2>POPULAR INTERNATIONAL DESTINATIONS</h2>
+      <p class="muted">Most requested routes from Kathmandu and Pokhara. Message us for the current fare on any of them.</p>
+    </div>
+    <div class="dest-grid">
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Dubai"><img class="dest-bg" src="{% static 'images/dubai.png' %}" alt=""><span class="code">DXB</span><div><h3>Dubai</h3><p>United Arab Emirates</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Doha"><img class="dest-bg" src="{% static 'images/qatar.png' %}" alt=""><span class="code">DOH</span><div><h3>Doha</h3><p>Qatar</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Kuala Lumpur"><img class="dest-bg" src="{% static 'images/malaysia.png' %}" alt=""><span class="code">KUL</span><div><h3>Kuala Lumpur</h3><p>Malaysia</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Bangkok"><img class="dest-bg" src="{% static 'images/thailand.png' %}" alt=""><span class="code">BKK</span><div><h3>Bangkok</h3><p>Thailand</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Singapore"><img class="dest-bg" src="{% static 'images/singapore.png' %}" alt=""><span class="code">SIN</span><div><h3>Singapore</h3><p>Singapore</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Delhi"><img class="dest-bg" src="{% static 'images/india.png' %}" alt=""><span class="code">DEL</span><div><h3>Delhi</h3><p>India</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to London"><img class="dest-bg" src="{% static 'images/london.png' %}" alt=""><span class="code">LHR</span><div><h3>London</h3><p>United Kingdom</p><em>Request fare</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a quote for Kathmandu to Sydney"><img class="dest-bg" src="{% static 'images/australia.png' %}" alt=""><span class="code">SYD</span><div><h3>Sydney</h3><p>Australia</p><em>Request fare</em></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOMESTIC DESTINATIONS ============ -->
+<section id="domestic" class="section alt">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">Explore Nepal</span>
+      <h2>POPULAR DOMESTIC DESTINATIONS</h2>
+      <p class="muted">Mountain flights, pilgrimage towns and city connections across Nepal, booked through our Pokhara desk.</p>
+    </div>
+    <div class="dest-grid">
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Kathmandu"><img class="dest-bg" src="{% static 'images/kathmandu.png' %}" alt=""><span class="code">KTM</span><div><h3>Kathmandu</h3><p>Capital city</p><em>Book ticket</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Pokhara"><img class="dest-bg" src="{% static 'images/pokhara.png' %}" alt=""><span class="code">PKR</span><div><h3>Pokhara</h3><p>Lakes &amp; Annapurna</p><em>Book ticket</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Lukla"><img class="dest-bg" src="{% static 'images/lukla.png' %}" alt=""><span class="code">LUA</span><div><h3>Lukla</h3><p>Everest region gateway</p><em>Book ticket</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Bhairahawa"><img class="dest-bg" src="{% static 'images/lumbini.png' %}" alt=""><span class="code">BWA</span><div><h3>Bhairahawa</h3><p>Lumbini, Buddha's birthplace</p><em>Book ticket</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Jomsom"><img class="dest-bg" src="{% static 'images/mustang.png' %}" alt=""><span class="code">JMO</span><div><h3>Jomsom</h3><p>Mustang &amp; Muktinath</p><em>Book ticket</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Janakpur"><img class="dest-bg" src="{% static 'images/janakpur.png' %}" alt=""><span class="code">JKR</span><div><h3>Janakpur</h3><p>Sacred city of Sita</p><em>Book ticket</em></div></a>
+      <a class="dest has-img" href="https://wa.me/9779851240378?text=Hi, I need a ticket to Nepalgunj"><img class="dest-bg" src="{% static 'images/rara.png' %}" alt=""><span class="code">KEP</span><div><h3>Nepalgunj</h3><p>Gateway to Bardia &amp; Rara</p><em>Book ticket</em></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VEHICLE BOOKING ============ -->
+<section id="vehicles" class="section">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">Ground Transport</span>
+      <h2>VEHICLE BOOKING</h2>
+      <p class="muted">Airport pickup, city rides and tours across Nepal. Choose a vehicle, send your trip details, and our desk confirms the price and driver on WhatsApp.</p>
+    </div>
+
+    <div class="veh-grid">
+      <article class="card veh"><span class="ico"><i class="fa-solid fa-car-side"></i></span><h3>Car / Sedan</h3><p>Airport transfers and city rides for 1 to 3 passengers.</p><button type="button" class="veh-pick" data-vehicle="Car / Sedan">Book this</button></article>
+      <article class="card veh"><span class="ico"><i class="fa-solid fa-truck-monster"></i></span><h3>SUV / Jeep</h3><p>Comfortable for hill roads and family trips, up to 5 passengers.</p><button type="button" class="veh-pick" data-vehicle="SUV / Jeep">Book this</button></article>
+      <article class="card veh"><span class="ico"><i class="fa-solid fa-van-shuttle"></i></span><h3>Hiace Van</h3><p>Groups and families of 6 to 12 with luggage space.</p><button type="button" class="veh-pick" data-vehicle="Hiace Van">Book this</button></article>
+      <article class="card veh"><span class="ico"><i class="fa-solid fa-bus"></i></span><h3>Tourist Bus</h3><p>Large groups, school trips and pilgrimages, 20 or more seats.</p><button type="button" class="veh-pick" data-vehicle="Tourist Bus">Book this</button></article>
+      <article class="card veh"><span class="ico"><i class="fa-solid fa-motorcycle"></i></span><h3>Motorbike Rental</h3><p>Self-ride bikes for Pokhara and the surrounding area.</p><button type="button" class="veh-pick" data-vehicle="Motorbike Rental">Book this</button></article>
+      <article class="card veh"><span class="ico"><i class="fa-solid fa-plane-arrival"></i></span><h3>Airport Pickup &amp; Drop</h3><p>Driver waits at arrivals with your name. Pokhara and Kathmandu airports.</p><button type="button" class="veh-pick" data-vehicle="Airport Pickup & Drop">Book this</button></article>
+    </div>
+
+    <form class="card veh-form" id="vehicleForm" onsubmit="sendVehicle(event)">
+      <h3>BOOK YOUR VEHICLE</h3>
+      <p class="muted">Fill in your trip. We reply with the price, driver and vehicle details.</p>
+      <div class="fields">
+        <label>Full Name<input name="name" placeholder="Your name" required></label>
+        <label>Phone / WhatsApp<input name="phone" type="tel" placeholder="+977 98..." required></label>
+        <label>Vehicle Type
+          <select name="vehicle" id="vehicleSelect">
+            <option>Car / Sedan</option>
+            <option>SUV / Jeep</option>
+            <option>Hiace Van</option>
+            <option>Tourist Bus</option>
+            <option>Motorbike Rental</option>
+            <option>Airport Pickup &amp; Drop</option>
+          </select>
+        </label>
+        <label>Trip Type
+          <select name="trip"><option>One way</option><option>Round trip</option><option>Full day / tour</option></select>
+        </label>
+        <label>Pickup Location<input name="pickup" placeholder="e.g. Pokhara Airport" required></label>
+        <label>Drop Location<input name="drop" placeholder="e.g. Lakeside hotel" required></label>
+        <label>Pickup Date<input type="date" name="date" required></label>
+        <label>Pickup Time<input type="time" name="time"></label>
+        <label>Number of Passengers<input type="number" name="pax" min="1" value="1"></label>
+        <label class="full">Notes (Optional)
+          <textarea name="notes" rows="3" placeholder="Luggage, child seat, flight number, stops on the way..."></textarea>
+        </label>
+      </div>
+      <button class="btn btn-orange block">Send Booking Request</button>
+      <p class="form-note" id="vehicleNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section alt">
+  <div class="container about">
+    <div>
+      <span class="pill">Local Expertise, Global Reach</span>
+      <h2>YOUR JOURNEY. OUR SERVICE.</h2>
+      <p class="muted">FEWASTAR INTERNATIONAL TRAVEL &amp; TOURS is a travel agency based in Pokhara, Nepal, providing air ticketing and travel assistance for travelers heading to destinations around the world. Our focus is simple — make international travel easier through reliable service, competitive flight options and personal assistance.</p>
+      <div class="chips">
+        <span>24/7 Flight Support</span>
+        <span>Certified IATA Airline Ticketing</span>
+        <span>Student &amp; Work Visa Flights</span>
+        <span>Seamless Rescheduling Support</span>
+      </div>
+      <div class="stats">
+        <div><b>100+</b>Airline Partners</div>
+        <div><b>50+</b>Global Destinations</div>
+        <div><b>100%</b>Verified Ticketing</div>
+      </div>
+    </div>
+    <div class="map">
+      <span class="r r1">LON - LHR</span><span class="r r2">TYO - HND</span>
+      <span class="r r3">DXB - DUBAI</span><span class="r r4">SYD - KINGSFORD</span>
+      <div class="badge"><b>10,000+</b> Happy Travelers Assisted <em>★ 4.9/5.0</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ READY TO FLY ============ -->
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <span class="pill light">Your Gateway From Pokhara</span>
+      <h2>READY TO FLY?</h2>
+      <p>Tell us where you want to go and we'll help you with your flight options.</p>
+    </div>
+    <div class="row">
+      <a href="#contact" class="btn btn-orange">Request a Quote</a>
+      <a href="https://wa.me/9779851240378" class="btn btn-glass">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONNECT WITH US ============ -->
+<section id="connect" class="section">
+  <div class="container connect">
+    <div class="connect-text">
+      <span class="eyebrow">Connect With Us</span>
+      <h2>HAVE A QUESTION? LET'S TALK.</h2>
+      <p class="muted">Fill in the form and our Pokhara desk will get back to you on WhatsApp or email. Ask about flights, visas, holiday packages or group bookings.</p>
+      <ul class="connect-points">
+        <li>Reply within 2 hours in office time</li>
+        <li>No charge for enquiries</li>
+        <li>Your details are used only to answer you</li>
+      </ul>
+      <a class="btn btn-green" href="https://wa.me/9779851240378">Prefer chat? Open WhatsApp</a>
+    </div>
+
+    <form class="card connect-form" id="connectForm" onsubmit="sendConnect(event)">
+      <h3>SEND US A MESSAGE</h3>
+      <div class="fields">
+        <label>Full Name<input name="name" placeholder="Your name" required></label>
+        <label>Phone / WhatsApp<input name="phone" type="tel" placeholder="+977 98..." required></label>
+        <label>Email (Optional)<input name="email" type="email" placeholder="you@example.com"></label>
+        <label>I Need Help With
+          <select name="topic">
+            <option>International flight ticket</option>
+            <option>Domestic flight ticket</option>
+            <option>Visa / student travel</option>
+            <option>Holiday or trekking package</option>
+            <option>Group booking</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="full">Your Message
+          <textarea name="message" rows="4" placeholder="Tell us what you need..." required></textarea>
+        </label>
+      </div>
+      <button class="btn btn-orange block">Send Message</button>
+      <p class="form-note" id="connectNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CONTACT / QUOTE ============ -->
+<section id="contact" class="section alt">
+  <div class="container">
+    <div class="center head">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>PLAN YOUR FLIGHT WITH AN EXPERT</h2>
+      <p class="muted">Direct quotes, tailored layover preferences, group fares, and student discounts handled personally by our Pokhara desk.</p>
+    </div>
+    <div class="contact-grid">
+      <aside class="card info">
+        <div class="official">
+          <small>Official Travel Agency</small>
+          <h3>FEWASTAR INTERNATIONAL TRAVEL &amp; TOURS</h3>
+          <p>Registered Tour &amp; Travel Operator under Gandaki Province Tourism Authority.</p>
+        </div>
+        <dl>
+          <dt>Location</dt><dd><b>Pokhara, Nepal</b><br>Lakeside &amp; Central Booking Counter</dd>
+          <dt>Phone / WhatsApp</dt><dd><b>+977 9851240378</b><br>Direct line for urgent ticketing queries</dd>
+          <dt>Email Enquiries</dt><dd><b>vayulinktravel@gmail.com</b><br>Quotes delivered within 2 hours</dd>
+          <dt>Office Working Hours</dt><dd><b>Sun - Fri: 9:00 AM - 6:30 PM</b><br>Saturday: On-call flight emergencies</dd>
+        </dl>
+        <a class="btn btn-green block" href="https://wa.me/9779851240378">Chat on WhatsApp (+977 9851240378)</a>
+      </aside>
+
+      <form class="card quote" onsubmit="sendQuote(event)">
+        <span class="eyebrow">Rapid Airfare Estimation</span>
+        <h3>REQUEST YOUR FLIGHT QUOTE</h3>
+        <p class="muted">Fill in your planned itinerary. Our flight specialists will send you the lowest real-time fares and schedule alternatives directly on WhatsApp.</p>
+        <div class="fields">
+          <label>Origin (From)<input name="origin" placeholder="e.g. Pokhara, Kathmandu (KTM)" required></label>
+          <label>Destination (To)<input name="destination" placeholder="e.g. Dubai, Sydney, London" required></label>
+          <label>Travel Date<input type="date" name="depart"></label>
+          <label>Return Date (Optional)<input type="date" name="return"></label>
+          <label>Number of Passengers
+            <select name="pax"><option>1 Adult</option><option>2 Adults</option><option>3 Adults</option><option>4+ Adults</option></select>
+          </label>
+          <label>WhatsApp Number<input name="whatsapp" placeholder="+977 98..."></label>
+          <label class="full">Travel Preferences / Notes (Optional)
+            <textarea name="notes" rows="3" placeholder="Tell us if you prefer direct flights, specific airlines, extra baggage, or visa inquiry..."></textarea>
+          </label>
+        </div>
+        <button class="btn btn-orange block">Request Quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}" defer></script>
+{% endblock %}
